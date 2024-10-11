@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hola mundo</h1>
+    <h1>Hello World JavaScript</h1>
 
     <script>
         var worstName = 'diego';
@@ -45,17 +45,67 @@ console.log(colores);
 
 let nombre = "Yisus";
 let apellido = 'Capetillo';
-let saludo = new String("Helllo World");
+let saludo = new String("Hello World");
+let lorem = "Gueorgui Vasílievich Chicherin";
 
 console.log(nombre,apellido,saludo);
 console.log(
     nombre.length,
     apellido.length,
-    saludo.length
+    saludo.length,
+    nombre.toUpperCase(),
+    apellido.toLowerCase(),
+    lorem.includes("Chicherin"),
+    lorem.includes("Vikingo"),
+    apellido.repeat(3),
 );
 
 
+// Template Strings
+nombre = "Yisus";
+apellido = "Capetillo";
 
+
+
+// Concatenacion
+saludo = "Hola mi nombre es" + nombre + " " + apellido + "."
+console.log(saludo);
+
+
+
+// Interpolacion de variables
+// Template String
+let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+console.log(saludo2);
+
+
+
+// Números
+let b = 2;
+let c = new Number(1);
+let d = 7.19;
+let e = "5.6";
+
+console.log(b,c);
+console.log(d.toFixed(1));
+console.log(typeof d, typeof e);
+console.log(d + parseInt(e));
+console.log(d + parseFloat(e)); 
+
+
+
+// Booleans
+
+// primera opcion de booleans
+let verdadero = true;  
+let falso = false;
+// segunda opcion
+let v = Boolean(true);
+let f = Boolean(false);
+
+
+console.log(verdadero,falso, v, f);
+console.log(typeof verdadero, typeof falso);
 
     </script>
 </body>

@@ -107,6 +107,77 @@ let f = Boolean(false);
 console.log(verdadero,falso, v, f);
 console.log(typeof verdadero, typeof falso);
 
+
+
+// Undefined 
+let indefinida;
+console.log(indefinida)
+
+
+
+// null
+let nulo = null;
+console.log(null);
+
+
+
+// NaN
+let noEsUnNumero = "hola" * 3.7
+console.log(noEsUnNumero);
+
+
+
+// Funciones
+
+// Función Declarada
+function estoEsUnaFuncion() {
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+}
+
+// Invocacion de Funcion
+estoEsUnaFuncion();
+
+
+
+// Function and return
+function unaFuncionQueDevuelveValor(){
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+    return "La funcion a retornado una cadena de texto";
+}
+
+let valorDeFuncion = unaFuncionQueDevuelveValor();
+console.log(valorDeFuncion);
+
+
+
+// Function and parameters
+function saludar(nombre,edad){
+    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+}
+
+saludar("Alicia",19);
+
+
+
+// Funcion declarada VS Funcion expresada
+function funcionDeclarada(){
+    console.log("Esto es una funcion DECLARADA, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
+}
+funcionDeclarada();
+
+
+
+const funcionExpresada = function (){
+    console.log("Esto es una funcion EXPRESADA, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dirá Cannot access before initialization")
+}
+
+funcionExpresada();
+
+
     </script>
 </body>
 </html>

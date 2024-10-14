@@ -178,6 +178,82 @@ const funcionExpresada = function (){
 funcionExpresada();
 
 
+
+// Arreglos (Arrays)
+const g = [11, true, "Hola", ["A","B","C"]];
+console.log(g);
+console.log(g.length);
+console.log(g[2]);
+console.log(g[0]);
+console.log(g[3]);
+console.log(g[3][2]);
+
+const h = Array.of("X", "Y", "Z", 9,8,7);
+console.log(h);
+
+const i = Array(100).fill(false);
+console.log(i);
+
+const colors = ["Red","Green","Blue"];
+console.log(colors);
+
+// Metodo Push agregar un nuevo elemento 
+colors.push("Negro");
+console.log(colors);
+
+// Metodo Pop elimina el ultimo elemento 
+colors.pop();
+console.log(colors);
+
+// Metodo forEach
+colors.forEach(function (el,index) {
+    console.log(`<li id="${index}"${el}</li>`);
+});
+
+
+
+
+// Objects
+const sara = {
+    id: "ygjhjgfhjgkhfjkhfjkghgjkghjk",
+    nombre: "Sara",
+    apellido: "Carbonero",
+    edad: 35,
+    estatura: "1,66m",
+    pasatiempos: ["Correr", "Hacer ejercicio", "Ver peliculas"],
+    soltero: false,
+    contacto: {
+        email: "saracar@fierro.com",
+        twitter: "@saracar",
+        movil: "4921234455"
+    },
+    saludar: function () { 
+        console.log(`Hola`)
+    }
+}
+
+console.log(sara);
+console.log(sara["nombre"]);
+console.log(sara["apellido"]);
+console.log(sara.nombre);
+console.log(sara.apellido);
+console.log(sara.edad);
+console.log(sara.estatura);
+console.log(sara.pasatiempos);
+console.log(sara.soltero);
+console.log(sara.contacto.email);
+console.log(sara.contacto.movil);
+console.log(sara.contacto.twitter);
+
+if(sara.contacto.twitter === "elon musk")
+    console.log(false)
+else 
+    console.log(true)
+
+console.log(Object.keys(sara));
+console.log(Object.values(sara));
+
+
     </script>
 </body>
 </html>

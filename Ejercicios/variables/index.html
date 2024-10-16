@@ -16,6 +16,8 @@
 
         const guestName  = 'juan'
 
+
+
 let a;
 const PI = 3.116;
 //const Nueve:
@@ -41,6 +43,10 @@ colores.push("verde");
 console.log(objeto); 
 console.log(colores);
 
+
+
+
+
 // <!-- Cadena de Texto (Strings) -->
 
 let nombre = "Yisus";
@@ -61,9 +67,14 @@ console.log(
 );
 
 
+
+
+
 // Template Strings
 nombre = "Yisus";
 apellido = "Capetillo";
+
+
 
 
 
@@ -73,10 +84,14 @@ console.log(saludo);
 
 
 
+
+
 // Interpolacion de variables
 // Template String
 let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
 console.log(saludo2);
+
+
 
 
 
@@ -94,6 +109,8 @@ console.log(d + parseFloat(e));
 
 
 
+
+
 // Booleans
 
 // primera opcion de booleans
@@ -103,10 +120,8 @@ let falso = false;
 let v = Boolean(true);
 let f = Boolean(false);
 
-
 console.log(verdadero,falso, v, f);
 console.log(typeof verdadero, typeof falso);
-
 
 
 // Undefined 
@@ -114,16 +129,16 @@ let indefinida;
 console.log(indefinida)
 
 
-
 // null
 let nulo = null;
 console.log(null);
 
 
-
 // NaN
 let noEsUnNumero = "hola" * 3.7
 console.log(noEsUnNumero);
+
+
 
 
 
@@ -136,9 +151,9 @@ function estoEsUnaFuncion() {
     console.log("Tres");
 }
 
+
 // Invocacion de Funcion
 estoEsUnaFuncion();
-
 
 
 // Function and return
@@ -153,7 +168,6 @@ let valorDeFuncion = unaFuncionQueDevuelveValor();
 console.log(valorDeFuncion);
 
 
-
 // Function and parameters
 function saludar(nombre,edad){
     console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
@@ -162,20 +176,19 @@ function saludar(nombre,edad){
 saludar("Alicia",19);
 
 
-
 // Funcion declarada VS Funcion expresada
 function funcionDeclarada(){
     console.log("Esto es una funcion DECLARADA, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
 }
 funcionDeclarada();
 
-
-
 const funcionExpresada = function (){
     console.log("Esto es una funcion EXPRESADA, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta funcion antes de su definicion JS nos dirá Cannot access before initialization")
 }
 
 funcionExpresada();
+
+
 
 
 
@@ -197,18 +210,22 @@ console.log(i);
 const colors = ["Red","Green","Blue"];
 console.log(colors);
 
+
 // Metodo Push agregar un nuevo elemento 
 colors.push("Negro");
 console.log(colors);
+
 
 // Metodo Pop elimina el ultimo elemento 
 colors.pop();
 console.log(colors);
 
+
 // Metodo forEach
 colors.forEach(function (el,index) {
     console.log(`<li id="${index}"${el}</li>`);
 });
+
 
 
 
@@ -252,6 +269,512 @@ else
 
 console.log(Object.keys(sara));
 console.log(Object.values(sara));
+
+
+
+
+
+// Tipos de Operadores
+// Aritmeticos: = - * / % () */
+a = 5 + (5-10) * 3;
+let modulo = 5 % 2;
+
+console.log(a);
+console.log(modulo);
+
+
+// Relacionales: >, <,  >=,  <=, ==, ===, !=, !== */
+console.log(8 > 9);
+console.log(9 > 8);
+console.log(8 >= 9);
+console.log(9 >= 8);
+console.log(7 < 7);
+console.log(7 <= 7);
+
+
+// = 1 igual asignacion de variable 
+// == 2 iguales es comparacion de valores
+// === 3 iguales es comparacion de tipo de dato y de valor
+console.log(7 == 7);
+console.log("7" == 7);
+console.log(0 == false);
+
+console.log(7 === 7);
+console.log("7" === 7);
+console.log(0 === false);
+
+
+// Incremento Decremento
+let j = 2;
+// j = j + 2;   arroja resultado 
+// j *= 3;      arroja resultado 6
+
+
+// Operador Unario 
+// j++;    va sumando de a uno 
+// j--;    va restando de a uno
+j++;    
+
+console.log(j)
+
+
+
+
+
+// Condicionales
+let edad = 18;
+
+if(edad < 18) {
+    console.log("Eres menor de Edad");
+}
+else if (edad === 18) {
+    console.log("Tienes 18 años");
+}
+else{
+    console.log("Eres mayor de Edad");
+}
+
+
+// if - else if - else 
+// Dejame dormir - 0hrs  - 5hrs
+// Buenos dias   - 6hrs  - 11hrs
+// Buenas tardes - 12hrs - 18hrs
+// Buenas noches - 19hrs - 23hrs
+let hora = 5;
+if (hora >= 0 && hora <=5) {
+    console.log("Dejame dormir");
+}
+else if (hora >= 6 && hora <= 11){
+    console.log("buenos dias");
+}
+else if (hora >= 12 && hora <= 18) {
+    console.log("Buenas tardes");
+}
+else{
+    console.log("Buenas noches");
+}
+
+
+hora = 10;
+if (hora >= 0 && hora <=5) {
+    console.log("Dejame dormir");
+}
+else if (hora >= 6 && hora <= 11){
+    console.log("buenos dias");
+}
+else if (hora >= 12 && hora <= 18) {
+    console.log("Buenas tardes");
+}
+else{
+    console.log("Buenas noches");
+}
+
+
+hora = 14;
+if (hora >= 0 && hora <=5) {
+    console.log("Dejame dormir");
+}
+else if (hora >= 6 && hora <= 11){
+    console.log("buenos dias");
+}
+else if (hora >= 12 && hora <= 18) {
+    console.log("Buenas tardes");
+}
+else{
+    console.log("Buenas noches");
+}
+
+
+hora = 20;
+if (hora >= 0 && hora <=5) {
+    console.log("Dejame dormir");
+}
+else if (hora >= 6 && hora <= 11){
+    console.log("buenos dias");
+}
+else if (hora >= 12 && hora <= 18) {
+    console.log("Buenas tardes");
+}
+else{
+    console.log("Buenas noches");
+}
+
+
+// Operador Ternario (condicion)? verdadero:falsa
+console.log("Operador Ternario");
+let eresMayor = (edad >= 18)
+    ?"Eres mayor de Edad"
+    :"Eres menor de Edad";
+console.log(eresMayor);
+
+
+// Switch    - Case
+// domingo   - 0
+// lunes     - 1
+// martes    - 2
+// miercoles - 3
+// jueves    - 4
+// viernes   - 5
+// sabado    - 6
+let dia = 0;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 1;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 2;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 3;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 4;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 5;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 6;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+dia = 8;
+
+switch (dia) {
+        case 0:
+        console.log("domingo");
+        break;
+        case 1:
+        console.log("lunes");
+        break;
+        case 2:
+        console.log("martes");
+        break;
+        case 3:
+        console.log("miercoles");
+        break;
+        case 4:
+        console.log("jueves");
+        break;
+        case 5:
+        console.log("viernes");
+        break;
+        case 6:
+        console.log("sabado");
+        break;
+
+    default:
+        console.log("El dia no existe");
+        break;
+}
+
+
+
+
+
+// Ciclos (Loops)
+
+// Ciclo "for" necesita tener incluido:
+// - La variable que controla el ciclo
+// - La condicion 
+// - Y el incremento o decremento
+let numeros = [10,20,30,40,50,60,70,80,90,100];
+
+// este for es para saber si un arreglo tiene numero 70 en el
+for (let i =0; i < numeros.length; i++) {
+    if(numeros[i]===70){
+        console.log(`si contiene el valor: ${numeros[i]}`)
+        console.log("si tiene el valor: ", numeros[i])
+    }
+    console.log(numeros[i]);
+}
+
+
+// Ciclo "for in"
+// for (const key in object) {
+// }
+const Kylian = {
+    nombre:"Kylian",
+    apellido:"Mbappe",
+    edad:25
+}
+for (const propiedad in Kylian) {
+    console.log(`Key: ${propiedad}, Value: ${Kylian[propiedad]}`);
+}
+
+
+// Ciclo "for of"
+for (const elemento of numeros) {
+    console.log(elemento);
+}
+let cadena = "Hola Mundo ";
+for (const caracter of cadena) {
+    console.log(caracter);
+}
+
+
+
+
+
+
+
+
+// Exercises
+
+// 1. Imprimir números del 1 al 10
+// ● Usaunbucle for para recorrer los números del 1 al 10 y mostrarlos por consola.
+
+function imprimeNumeros(){
+    for(let i = 1; i <= 10; i++) {
+        console.log(i)
+    }
+}
+console.log(imprimeNumeros());
+
+
+
+///otra version
+
+function imprimeNumeros(numeroAContar){
+    for(let i = 1; i <= numeroAContar; i++) {
+        console.log(i)
+    }
+}
+console.log(imprimeNumeros(30));
+console.log(imprimeNumeros(40));
+
+// 2. Tabla de multiplicar
+//  ● Crea una función que acepte un número y muestre la tabla de multiplicar de ese número
+// //  del 1 al 10 utilizando un bucle.
+function muestraTablaDeMultiplicar(numero){
+    for(let i = 1; i <= 10; i++){
+        console.log(`${numero} * ${i} = `, numero*i) 
+    }
+}
+console.log(muestraTablaDeMultiplicar(4));
+console.log(muestraTablaDeMultiplicar(5));
+console.log(muestraTablaDeMultiplicar(3));
+
+
+// 3. Suma de números en un array
+//  ● Define una función que acepte un array de números y calcule la suma de todos los
+//  elementos utilizando un bucle
+function sumaDeNumerosEnArray(arrayNumeros){
+    let sum = 0;
+    for(let i = 0; i < arrayNumeros.length; i++){
+        console.log(arrayNumeros[i])
+    }
+}
+
+let arr = [1,2,3,4,5];
+console.log(sumaDeNumerosEnArray(arr));
+
+// 1. Imprimir números del 1 al 5
+
+// Usa un bucle for para recorrer los números del 1 al 5 y mostrarlos por consola.
+for (let i = 1; i <= 5; i++){
+    console.log(i)
+}
+
+// 2. Imprimir números pares del 1 al 10
+
+// Crea un bucle que recorra del 1 al 10 e imprima solo los números pares.
+for(let i = 1; i <= 10; i++){
+    if(i%2===0){
+        console.log(i)
+    }
+}
+
+// 3. Usa un bucle for para sumar los números del 1 al 10 e imprime el resultado total.
+let sum = 0
+for(let i = 1; i <= 10; i++){
+        sum = sum +i;
+}
+console.log(sum);
+
+
+
 
 
     </script>

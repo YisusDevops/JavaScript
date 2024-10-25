@@ -747,31 +747,229 @@ function sumaDeNumerosEnArray(arrayNumeros){
     }
 }
 
-let arr = [1,2,3,4,5];
-console.log(sumaDeNumerosEnArray(arr));
 
-// 1. Imprimir números del 1 al 5
+// 4. Contar vocales en una cadena
+//  ● Creaunafunción que reciba una cadena de texto y cuente cuántas vocales hay en ella.
+//  Usa condicionales para verificar si cada carácter es una vocal
 
-// Usa un bucle for para recorrer los números del 1 al 5 y mostrarlos por consola.
-for (let i = 1; i <= 5; i++){
-    console.log(i)
+function contarVocales(textoARecibir){
+    let contadorDeVocales = 0;
+    let vocales = 'aeiou';
+    
+    for(let i = 0; i < textoARecibir.length; i++){
+        if(vocales.includes(textoARecibir[i])){
+            // contadorDeVocales++
+            contadorDeVocales = contadorDeVocales + 1
+            // contadorDeVocales +=1
+        }
+    }
+
+    return contadorDeVocales;
 }
 
-// 2. Imprimir números pares del 1 al 10
+const textoAMandar = 'The quick brown fox jumps over the lazy dog.';
+console.log(contarVocales(textoAMandar))
 
-// Crea un bucle que recorra del 1 al 10 e imprima solo los números pares.
-for(let i = 1; i <= 10; i++){
-    if(i%2===0){
-        console.log(i)
+
+
+function formandoNombreCompleto(nombre, apellidoPaterno, apellidoMaterno){
+    // console.log(`${numero} * ${i} = `, numero*i) 
+    return `${nombre} ${apellidoPaterno} ${apellidoMaterno}`
+}
+
+console.log(formandoNombreCompleto('Juan', 'Perez', 'Calderon'))
+console.log(formandoNombreCompleto('Diego', 'Herrera', 'Chairez'))
+console.log(formandoNombreCompleto('Javier', 'Valdez', 'Rodriguez'))
+console.log(formandoNombreCompleto('Elena', 'Rodriguez','Carranza'))
+console.log(formandoNombreCompleto('Pedro','Valdez', 'Rosales'))
+
+
+
+
+
+// 5. Invertir un array
+//  ● Escribe una función que reciba un array y devuelva el array invertido. Usa un bucle para
+//  iterar sobre el array desde el final hasta el principio
+function creandoArrayInvertido(array){
+    let arrayInvertido = [];
+
+
+    for(let i = array.length - 1; i>= 0; i--){
+        arrayInvertido.push(array[i]);
+    }
+
+    return arrayInvertido;
+}
+
+let arr = [1,2,3,4,5]
+let arr2 = [6,7,8,9,10]
+// [1,2,3,4,5] longitud = 5. indices del 0 al 4
+console.log(creandoArrayInvertido(arr2)) 
+//si quieres acceder al elemento 5, el indice es [4] o [array.length - 1]
+
+
+
+
+
+// 6. Encontrar el número mayor en un array
+//  ● Creaunafunción que acepte un array de números y encuentre el número más grande
+//  usando un bucle y una variable que se actualice al encontrar un número mayor
+function encontrarNumeroMayor(array){
+    if( array.length === 0){
+        return "EL array esta vacio"
+    }
+
+    let numeroMayor = array[0]
+    for(let i = 1; i < array.length; i++){
+        if(array[i] > numeroMayor){
+            numeroMayor = array[i];
+        }
+    }
+    return numeroMayor;
+}
+
+console.log(encontrarNumeroMayor([3,7,2,9,1,5]));
+
+
+
+
+// Manejo de Errores
+try {
+    console.log("En el Try se agrega el codigo a evaluar");
+    noExiste; 
+} catch (error) {
+    console.log("Catch, captura cualquier error surgido o lanzado en el Try");
+} finally {
+    console.log("EL bloque Finally se ejecutara siempre al final de un bloque try-catch");
+}
+
+// Ejemplo
+try {
+    let numero = "10"; 
+
+    if (isNaN(numero)) {
+        throw new Error("El caracter introducido no es Numero");
+    }
+    
+    console.log(numero*numero);
+} catch (error) {
+    console.log(`Se produjo el siguiente error: ${error}`);
+}
+
+
+
+
+// Break & Continue
+const numbers = [1,2,3,4,5,6,7,8,9,0]
+
+for (let i = 0; i < numbers.length; i++){
+    if (i === 5){
+        break;
+    }
+    console.log(numbers[i]);
+}
+
+
+for (let i = 0; i < numbers.length; i++){
+    if (i === 5){
+        continue;
+    }
+    console.log(numbers[i]);
+}
+
+
+
+
+
+// Destructuracion
+const arrayNumeros = [1,2,3];
+
+// Sin Destructuracion 
+let uno = arrayNumeros[0],
+    dos = arrayNumeros[1],
+    tres = arrayNumeros[2];
+
+console.log(uno,dos,tres);
+
+
+// Con Destructuracion 
+const [one, two,three] = arrayNumeros;
+console.log(one,two, three);
+
+let persona = {
+    nombrede: "Jon",
+    apellidode: "Mircha",
+    edadde: 35
+}
+
+let {nombrede, apellidode, edadde} = persona;
+console.log(nombre, apellido, edad);
+
+
+
+// Parámetros REST & Operador Spread
+function sumar (a, b, ...c){
+    let resultado = a + b;
+
+    c.forEach(function (n) {
+        resultado += n
+    });
+
+    return resultado;
+}
+console.log(sumar(1,2));
+console.log(sumar(1,2,3));
+console.log(sumar(1,2,3,4));
+console.log(sumar(1,2,3,4,5));
+console.log(sumar(1,2,3,4,5,6));
+console.log(sumar(1,2,3,4,5,6,7));
+
+
+const arreg1 = [1,2,3,4,5], arreg2 = [6,7,8,9,0];
+console.log(arreg1,arreg2);
+
+console.log(arreg1,arreg2);
+
+const arreg3 = [...arreg1, ...arreg2];
+console.log(arreg3);
+
+
+
+
+
+// Arrow Functions
+const saludar2 = nombre => console.log(`Hola ${nombre}`);
+saludar2("Isabella");
+
+const sumar2 = (a,b) => a + b;
+
+console.log(sumar2(9,9));
+
+
+
+
+
+// Prototipos
+const animal = {
+    nombre: "Snoopy",
+    sonar() {
+        console.log("Hago sonidos porque estoy vivo");
     }
 }
 
-// 3. Usa un bucle for para sumar los números del 1 al 10 e imprime el resultado total.
-let sum = 0
-for(let i = 1; i <= 10; i++){
-        sum = sum +i;
+const animal2 = {
+    nombre:"Lola Bunny",
+    sonar(){
+        console.log("Hago sonidos porque estoy vivo")
+    }
 }
-console.log(sum);
+
+console.log(animal);
+console.log(animal2);
+
+
+
+
 
 
 
@@ -780,3 +978,4 @@ console.log(sum);
     </script>
 </body>
 </html>
+

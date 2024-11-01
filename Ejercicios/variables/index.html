@@ -967,9 +967,241 @@ const animal2 = {
 console.log(animal);
 console.log(animal2);
 
+// Funcion Constructora
+function Animal (nombre, genero){
+// Atributos
+    this.nombre = nombre;
+    this.genero = genero;
+
+// Metodos
+    this.sonar = function(){
+        console.log("Hago sonidos porque estoy vivo")
+    }
+}
+
+// Herencia Prototipica
+function Perro(nombre,genero,tamanio) {
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio;
+}
+
+// Perro esta heredando de Animal
+Perro.prototype = new Animal();
+Perro.prototype.constructor = Perro;
+
+// Sobrescritura de metodos del prototipo padre enn el hijo
+Perro.prototype.sonar = function () {
+    console.log("Soy un perro y mi sonido es un ladrido");
+}
+
+Perro.prototype.ladrar = function () {
+    console.log("Guauuu Guauuu");
+}
+
+// Instancias de Funcion Constructora
+const snoopy = new Animal("Snoopy", "Macho"),
+    lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+console.log(snoopy);
+console.log(lolaBunny); 
 
 
 
+
+
+// Clases y Herencia
+class Animal2 {
+    // El constructor es un método especial que se ejecuta en el momento de instanciar la clase
+    constructor(nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    // Métodos
+    sonar() {
+        console.log("Hago sonidos porque estoy vivo");
+    }
+
+    saludar() {
+        console.log(`Hola, me llamo ${this.nombre}`);
+    }
+}
+
+// Definición de la clase Perro que hereda de Animal2
+class Perro2 extends Animal2 {
+    constructor(nombre, genero, tamanio) {
+        super(nombre, genero); // Llama al constructor de la clase padre
+        this.tamanio = tamanio;
+    }
+
+    // Método sobrescrito
+    sonar() {
+        console.log("Soy un perro y mi sonido es un ladrido");
+    }
+
+    ladrar() {
+        console.log("Guauuu Guauuu!!!");
+    }
+}
+
+// Creación de instancias
+const mimi = new Animal2("Mimi", "Hembra"),
+    scooby = new Perro("Scooby", "Macho", "Gigante");
+
+console.log(mimi);
+mimi.saludar();
+mimi.sonar();
+
+console.log(scooby);
+//  
+scooby.sonar();
+scooby.ladrar();
+
+
+
+
+
+// Objeto Console
+console.log(console);
+console.error("Esto es un error");
+console.warn("Esto es un aviso");
+console.info("Esto es un mensaje informativo");
+console.log("Un registro de lo que ha pasado en nuestra aplicacion");
+console.dir("window");
+
+console.group("Mi Musica")
+console.log("Rap");
+console.log("R&B");
+console.log("Deep House");
+console.log("Electro");
+console.log("Rock");
+console.groupEnd();
+
+console.log(console);
+console.table(Object.entries(console).sort());
+
+const numbers2 = [1,2,3,4,5],
+    vocales = ["a", "e", "i", "o", "u"];
+
+console.table(numbers2);
+console.table(vocales);
+
+const pez = {
+    nombre: "Soni",
+    raza: "espada",
+    color: "plata"
+}
+console.table(pez);
+
+let x = 3, 
+    y = 2;
+    pruebaXY = "Se espera que X siempre sea menor que Y";
+console.assert(x < y, {pruebaXY});
+
+
+
+
+
+// Objeto Date 
+console.log(Date());
+
+let fecha = new Date();
+console.log(fecha);
+
+console.log(fecha.getDay());
+console.log(fecha.getMonth());
+console.log(fecha.getHours());
+console.log(fecha.getMinutes());
+console.log(fecha.getSeconds());
+console.log(fecha.getMilliseconds());
+console.log(fecha.toString());
+console.log(fecha.toDateString());
+console.log(fecha.toLocaleDateString());
+console.log(fecha.toLocaleTimeString());
+console.log(fecha.toLocaleTimeString());
+console.log(fecha.getTimezoneOffset());
+console.log(fecha.getUTCDate());
+console.log(fecha.getUTCHours()); 
+
+
+
+
+
+
+// Objeto MAth 
+console.log(Math);
+console.log(Math.PI);
+console.log(Math.abs(-7.8));
+console.log(Math.ceil(7.2));
+console.log(Math.floor(7.8));
+console.log(Math.round(7.2));
+console.log(Math.sqrt(81));
+console.log(Math.pow(2,5));
+console.log(Math.sign(-7.8));
+console.log(Math.random());
+console.log(Math.random()*1000);
+
+
+
+
+
+// Operador de Cortocircuito
+function saludar3(nombre) {
+    nombre = nombre || "Desconocido";
+    console.log(`Hola ${nombre}`);
+}
+
+saludar3("Sam");
+
+console.log("cadena" || "Valor de la cadena");
+console.log(19 || "Valor de la derecha");
+console.log(true || "Valor de ;la derecha");
+console.log([] || "Valor de la derecha");
+console.log({} || "Valor de la derecha");
+console.log(false || "Valor de la derecha");
+console.log(null || "Valor de la derecha");
+console.log(undefined || "Valor de la derecha");
+console.log("" || "Valor de la derecha");
+console.log(-2 || "Valor de la derecha");
+
+
+
+
+
+// alert, confirm y prompt
+// console.log(window);
+// window.alert("Hola esto es una alerta");
+// window.confirm("Hola esto es una confirmacion");
+// window.prompt("Hola esto es un prompt y le permite al usuario ingresar un valor");
+
+
+
+
+
+// Expresiones Regulares
+let cadena2 = "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero válido en la Internet";
+
+let expReg = new RegExp("lorem","");
+let expReg2 = /lorem/; 
+
+console.log(expReg.test(cadena2));
+
+
+
+
+
+// Funciones Anónimas Autoejecutables
+(function () {
+    console.log("Mi primer IFE");
+})();
+
+(function (d,w,c) {
+    console.log("Mi segundo IFE");
+    console.log(d);
+    console.log(w);
+    c.log("Este es un console.log")
+})(document, window, console);
 
 
 

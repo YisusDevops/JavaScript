@@ -47,12 +47,12 @@ console.log(textoRepetidoV2(parrafo2,palabra));
 // Programa una función que valide si una palabra o frase dada es un palíndromo, 
 // (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 function palindromo(texto) {
-    const arrayDeLetras = texto.split(' ');
-
+    const arrayDeLetras = texto.split('');
+console.log(arrayDeLetras)
     const arrayInvertido = arrayDeLetras.reverse();
-
-    const reversed = arrayInvertido.join(' ');
-
+console.log(arrayInvertido)
+    const reversed = arrayInvertido.join('');
+console.log(reversed)
     if (reversed === texto){
         return true;
     } else {
@@ -63,6 +63,7 @@ function palindromo(texto) {
 const miTexto = 'arroz';
 console.log(palindromo(miTexto));
 
+console.log(palindromo('ana'));
 
 
 
@@ -71,3 +72,16 @@ console.log(palindromo(miTexto));
 //Exercise #8
 //  Programa una función que elimine cierto patrón de caracteres de un texto dado, 
 // pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+function eliminarCaracteres(texto, patron) {
+    return texto.replaceAll(patron,'')
+}
+
+const str = "xyz1, xyz2, xyz3, xyz4 y xyz5"
+const patron = 'xyz'
+console.log(eliminarCaracteres(str,patron));
+
+
+
+
+
+

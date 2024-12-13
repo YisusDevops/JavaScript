@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> JSON JavaScript Object Notation</h1>
+    <script>
+
+const json = {
+    cadena: "Yisus",
+    numero: 11,
+    boolean: true,
+    arreglo: ["correr", "programar", "musica"],
+    objeto: {
+        instagram: "@jaybetter",
+        youtube: "jaybetterbeats"
+    },
+    nulo: null
+}
+console.log(json);
+
+console.log(JSON.parse("{}"));
+console.log(JSON.parse("[1,2,3]"));
+console.log(JSON.parse("true"));
+console.log(JSON.parse("false"));
+console.log(JSON.parse("17"));
+console.log(JSON.parse("null"));
+
+
+console.log(JSON.stringify({}));
+console.log(JSON.stringify([1,2,3]));
+console.log(JSON.stringify(true));
+console.log(JSON.stringify(false));
+console.log(JSON.stringify(17));
+console.log(JSON.stringify(null));
+console.log(JSON.stringify(undefined));
+
+
+
+
+    </script>
+</body>
+</html> 

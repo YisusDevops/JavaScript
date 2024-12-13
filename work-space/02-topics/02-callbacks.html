@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Asincronia en JavaScript</h1>
+    <script>
+
+
+function cuadradoCallback(value,callback) {
+    setTimeout(() => {
+        callback(value,value*value);
+    }, 0 | Math.random() * 1000);
+}
+
+    cuadradoCallback(0,(value,result) => {
+        console.log("inicia Callback");
+        console.log(`Callback: ${value}, ${result}`);
+        cuadradoCallback(1,(value,result) => {
+            console.log(`Callback: ${value}, ${result}`);
+            cuadradoCallback(2,(value,result) => {
+                console.log(`Callback: ${value}, ${result}`);
+                cuadradoCallback(3,(value,result) => {
+                    console.log(`Callback: ${value}, ${result}`);
+                    cuadradoCallback(4,(value,result) => {
+                        console.log(`Callback: ${value}, ${result}`);
+                        cuadradoCallback(5,(value,result) => {
+                            console.log(`Callback: ${value}, ${result}`);
+                            console.log("Finaliza Callback");
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+
+
+//una vez que se raliza la operacion Asincrona que es cargar los productos, enseguida -
+//el Callback se ejecuta y va a mostrar todos los detalles del producto.
+
+//La operacion Asincrona y el Callback van de la mano cuando trabajas con API, Base de datos, Sitios web o Apps, -
+//ambos requieren cargar datos de manera dinamica.
+
+
+
+
+    </script>
+</body>
+</html> 

@@ -1,0 +1,14 @@
+{
+    "cadena": "Yisus",
+    "numero": "11",
+    "boolean": "true",
+    "arreglo": ["correr", "programar", "musica"],
+    "objeto": {
+        "instagram": "@jaybetter",
+        "youtube": "jaybetterbeats"
+    },
+    "nulo": null
+}
+
+
+//Todas las propiedades deben ir con comillas dobles ""
